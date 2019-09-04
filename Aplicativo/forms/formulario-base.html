@@ -1,0 +1,85 @@
+<h4 class="mb-3"></h4>
+<form class="needs-validation" id="formulario-base" novalidate>
+  <h4>Para realizar el proceso ETL ingrese los campos necesarios a Continuación: </h4>
+  <div class="row">
+    <div class="col-md-3 mb-3">
+      <label for="seleccion-base">Base de datos</label>
+      <div class="input-group">
+        <select class="form-control" name="seleccion-base" id="seleccion-base" required>
+          <option value=""></option>
+        </select>
+        <div class="invalid-feedback" style="width: 100%;">
+          Se requiere una BD válido.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+      <label for="seleccion-tabla">Tabla</label>
+      <div class="input-group">
+        <select class="form-control" name="seleccion-tabla" id="seleccion-tabla" required>
+            <option value=""></option>
+        </select>
+        <div class="invalid-feedback" style="width: 100%;">
+          Se requiere una tabla válida.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+      <label for="Asiento">Campo</label>
+      <div class="input-group">
+        <select class="form-control" name="seleccion-Asiento" id="seleccion-Asiento" required>
+          <option value=""></option>
+        </select>
+        <div class="invalid-feedback" style="width: 100%;">
+          Se requiere una Asiento válida.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+      <label for="Asiento">BBDD DATAWAREHOUSE</label>
+      <div class="input-group">
+        <select class="form-control" name="seleccion-Asiento" id="seleccion-Asiento" required>
+          <option value=""></option>
+        </select>
+        <div class="invalid-feedback" style="width: 100%;">
+          Se requiere una Asiento válida.
+        </div>
+        <div class="col-md-12 mb-3">
+
+        </div>
+
+        <hr class="mb-8">
+        <button class="btn btn-primary btn-lg btn-block" type="submit" id="registrar">Realizar proceso</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ingrese el Numero de su tarjeta de credito o debito</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input type="text" class="material-control" placeholder="Numero de la tarjeta" id="codigoCarrera"
+          required="required" maxlength="8" data-toggle="tooltip" data-placement="top" title="Num_tarjeta">
+        <input type="text" class="material-control" placeholder="codigo de seguridad" id="codigoCarrera"
+          required="required" maxlength="3" data-toggle="tooltip" data-placement="top" title="cod seguridad">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Continuar compra</button>
+        <button type="button" class="btn btn-primary">Guardar codigo</button>
+      </div>
+    </div>
+  </div>
+</div>
