@@ -1,13 +1,3 @@
-
-<?php
-
-session_start();
-
-$_SESSION['nombrebase']="Aerolinea";
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -28,18 +18,20 @@ $_SESSION['nombrebase']="Aerolinea";
   <br>
 
   <div class="container">
-    <h1>Conexiones:</h1>
+    <h1>Seleccione la tabla a modificar:</h1>
     <?php 
-      include('forms/formulario-conexion.html');
+      include('forms/formulario-tablas.html');
     ?>
   </div>
   <!-- Bootstrap core JavaScript
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
+  
   <script src="js/jquery.min.js"></script>
+  <script src="js/tablas.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/formulario-conexion.js"></script>
+  
 
 </body>
 

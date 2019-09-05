@@ -7,10 +7,10 @@ $.ajax({
         console.log(respuesta["total"]);
         for (var i = 0; i < respuesta.total; i++) {
             $("#oltp").append(
-                `<option value="${respuesta[i].id}">${respuesta[i].nombre}</option>`
+                `<option value="${respuesta[i].nombre}">${respuesta[i].nombre}</option>`
             );
             $("#olap").append(
-                `<option value="${respuesta[i].id}">${respuesta[i].nombre}</option>`
+                `<option value="${respuesta[i].nombre}">${respuesta[i].nombre}</option>`
             );
         }
     },
@@ -19,9 +19,42 @@ $.ajax({
     }
 });
 
+/* 
+$("#olap").change(function(){
+    alert ($("#olap").val());
+}); 
+ */
+
+/* function seleccionar_base() {
+    var tpm=$("#olap").val();
+    alert(tpm);
+    window.location.href = "tablas.php"
+} */
+
+/* $("#olap").change(function(){
+    console.log("Cuenta seleccionado: " + $("#olap").val());
+    var parametros= 
+            "olap="+$("#olap").val();
+    $.ajax({
+        url:"ajax/base-datos-dw.php",
+        method:"POST",
+        data:parametros,
+        dataType:"json",
+        success: function(respuesta){
+            console.log(respuesta);
+         
+        
+        },
+        error:function(error){
+            console.log(error);
+        }
+     });
+
+}); */
+
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
-(function () {
+ (function () {
     'use strict';
 
     window.addEventListener('load', function () {
@@ -38,18 +71,19 @@ $.ajax({
                     console.log("tamos mal :c");
                 } else {
                     console.log("tamos bien");
-                    /*var parametros = $("#formulario-base").serialize();
-                    console.log(parametros);
-
+                    var parametros = $("#formulario-base").serialize();
+                    alert(parametros);
+                    
                     $.ajax({
-                        url: "registro/php/registrarEmpleado.php?opcion=1",
+                        url: "ajax/base-datos-dw.php",
                         method: "POST",
                         dataType: "json",
                         data: parametros,
                         success: function (respuesta) {
-                            alert(respuesta.Mensaje1+', '+respuesta.Mensaje2+', '+respuesta.Mensaje3);
-                            limpiar();
+
                             console.log(respuesta);
+                            window.location.href = "tablas.php";
+
                         },
                         error: function (error) {
                             console.log(error);
@@ -57,7 +91,7 @@ $.ajax({
                             limpiar();
                         }
                     });
-                    */
+                 
                 }
                 
             }, false);
@@ -65,6 +99,6 @@ $.ajax({
     }, false);
 })();
 
-$("#formulario-conexion").submit(function () {
+$("#formulario-base").submit(function () {
     return false;
 });
