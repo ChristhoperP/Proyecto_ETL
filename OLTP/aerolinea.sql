@@ -74,7 +74,7 @@ CREATE TABLE Avion (
   idAvion INT NOT NULL,
   capacidad INT NULL,
   descripcion VARCHAR(45) NULL,
-  tiempoVuelo DECIMAL NULL,
+  tiempoVuelo FLOAT NULL,
   PRIMARY KEY (idAvion));
 
 
@@ -101,7 +101,7 @@ CREATE TABLE Asiento (
 CREATE TABLE Piloto (
   idPiloto INT NOT NULL,
   fechaIngreso DATE NULL,
-  cantidadHorasVuelo DECIMAL NULL,
+  cantidadHorasVuelo FLOAT NULL,
   Persona_idPersona INT NOT NULL,
   PRIMARY KEY (idPiloto),
   CONSTRAINT fk_Piloto_Persona1
@@ -231,12 +231,12 @@ CREATE TABLE Empleado (
 CREATE TABLE Boleto (
   idBoleto INT NOT NULL,
   fechaEmision DATE NULL,
-  precioCompra DECIMAL NULL,
+  precioCompra MONEY NULL,
   Asiento_idAsiento INT NOT NULL,
   vuelo_idvuelo INT NOT NULL,
   TipoClase_idTipoClase INT NOT NULL,
   Pasajero_idPasajero INT NOT NULL,
-  totalPrecioBoleto DECIMAL NULL,
+  totalPrecioBoleto MONEY NULL,
   Empleado_idEmpleado INT NOT NULL,
   PRIMARY KEY (idBoleto),
   CONSTRAINT fk_Boleto_Asiento1
@@ -272,10 +272,10 @@ CREATE TABLE Boleto (
 CREATE TABLE Equipaje (
   idEquipaje INT NOT NULL,
   descripcion VARCHAR(45) NULL,
-  peso DECIMAL NULL,
-  alto DECIMAL NULL,
-  ancho DECIMAL NULL,
-  profundidad DECIMAL NULL,
+  peso FLOAT NULL,
+  alto FLOAT NULL,
+  ancho FLOAT NULL,
+  profundidad FLOAT NULL,
   TipoClase_idTipoClase INT NULL,
   Boleto_idBoleto INT NULL,
   PRIMARY KEY (idEquipaje),
@@ -296,7 +296,7 @@ CREATE TABLE Equipaje (
 -- -----------------------------------------------------
 CREATE TABLE PrecioVuelo (
   idPrecioVuelo INT NOT NULL,
-  precio DECIMAL NULL,
+  precio MONEY NULL,
   fechaInicio DATE NULL,
   fechaFin DATE NULL,
   Vuelo_idVuelo INT NOT NULL,
