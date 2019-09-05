@@ -1,7 +1,7 @@
 /* var parametros="nombre="+$("#nombre").html(); */
 
     $.ajax({
-        url: "ajax/base-datos-dw.php",
+        url: "ajax/base-datos-dw2.php",
         dataType: "json",
         success: function(respuesta) {
             console.log(respuesta);

@@ -5,16 +5,14 @@
         */
         
         session_start();
-        $_SESSION["oltp"]=$_POST["oltp"];
-        $_SESSION["olap"]=$_POST["olap"];
       
 
-        //$base=$_SESSION["nombrebase"]; 
+        $base=$_SESSION["olap"]; 
         
   
  //se establece una conexion a la base de datos
    
- /*include '../class/class-conexion.php';
+ include '../class/class-conexion.php';
     $conexion=new Conexion("localhost",$base);
 
     $resultado=$conexion->ejecutarConsulta('select t.name
@@ -35,22 +33,6 @@
 
     $formato.='"total":"'.$tope.'"}';
 
-    //var_dump($registro);
-
     echo $formato;
-      /*   break;
-    
-    case 2:
-        break;
-    
-    case 3:
-    break; */
 
-    /* session_start();
-
-    $_SESSION["nombrebase"]=$_POST["olap"];*/
-
-    echo '{"Olap":"'.$_SESSION["olap"].'"}';
-
-    
 ?>

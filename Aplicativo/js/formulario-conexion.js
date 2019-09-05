@@ -73,7 +73,7 @@ $("#olap").change(function(){
                 } else {
                     console.log("tamos bien");
                     var parametros = $("#formulario-base").serialize();
-                    alert(parametros);
+                    //alert(parametros);
                     
                     $.ajax({
                         url: "ajax/base-datos-dw.php",
