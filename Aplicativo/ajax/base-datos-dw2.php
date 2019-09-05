@@ -1,8 +1,5 @@
 <?php
-/* switch ($_GET["opcion"]) {
- 
-    case 1:
-        */
+
         
         session_start();
       
