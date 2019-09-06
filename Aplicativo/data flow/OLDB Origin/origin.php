@@ -20,7 +20,7 @@
     <div class="container">
         <h2>Origen OLDB</h2>
         <p>Seleccionar la tabla de origen o la consulta para los datos de origen:</p>
-        <form action="">
+        <form class="needs-validation" id="formulario-origen">
             <div class="form-check-inline">
                 <label class="form-check-label" for="radio1">
                     <input type="radio" class="form-check-input" id="seleccion-tabla" name="optradio"
@@ -35,17 +35,12 @@
             </div>
 
             <div class="mt-4 d-none" id="panel-tabla">
-                <select multiple class="form-control" id="tabla-origen" name="sellist2">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+                <select multiple class="form-control" id="tabla-origen" name="tabla-origen">
                 </select>
             </div>
 
             <div class="mt-4 d-none" id="panel-consulta">
-                <textarea class="form-control" rows="5" id="consulta" name="text"></textarea>
+                <textarea class="form-control" rows="5" id="consulta" name="consulta"></textarea>
             </div>
             <br>
             <button type="submit" class="btn btn-primary mt-4" id="btn-org" disabled>Siguiente</button>
