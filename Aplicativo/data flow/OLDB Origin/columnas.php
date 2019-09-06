@@ -20,11 +20,11 @@
     <div class="container">
         <h2>Columnas OLDB</h2>
         <p>Seleccionar las columnas que necesita:</p>
-        <form class="needs-validation" id="formulario-origen">
+        <form class="needs-validation" id="formulario-columnas">
             <div id="columnas">
                 
             </div>
-            <button type="submit" class="btn btn-primary mt-4" id="btn-col">Finalizar</button>
+            <button type="button" class="btn btn-primary mt-4" id="btn-col">Finalizar</button>
         </form>
     </div>
 

@@ -31,19 +31,32 @@ switch ($_POST["optradio"]) {
 
         $consulta = "SELECT * FROM " . $_POST["tabla-origen"];
 
-        if($resultado=$conexion->ejecutarConsulta($consulta)){
+        if ($resultado = $conexion->ejecutarConsulta($consulta)) {
             //guarda la consulta
-            $_SESSION["consulta-origen"]=$consulta;
+            $_SESSION["consulta-origen"] = $consulta;
             //guarda las columnas
-            $_SESSION["columnas-origen"]=sqlsrv_field_metadata($resultado);
+            $_SESSION["columnas-origen"] = sqlsrv_field_metadata($resultado);
             echo '{"resul":"1"}';
-        }else{
+        } else {
             echo '{"resul":"0"}';
         }
 
         break;
     case 'option2':
-        echo '{"op":"2"}';
+        $db = $_SESSION["oltp"];
+        $conexion = new Conexion("localhost", $db);
+
+        $consulta = $_POST["consulta"];//En teoria solo cambia la consulta
+
+        if ($resultado = $conexion->ejecutarConsulta($consulta)) {
+            //guarda la consulta
+            $_SESSION["consulta-origen"] = $consulta;
+            //guarda las columnas
+            $_SESSION["columnas-origen"] = sqlsrv_field_metadata($resultado);
+            echo '{"resul":"1"}';
+        } else {
+            echo '{"resul":"0"}';
+        }
         break;
     default:
         echo '{"op":"no funciona"}';
