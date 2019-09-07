@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -7,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Origen</title>
+    <title>Odbl Command</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="../../css/bootstrap.css">
@@ -16,36 +14,27 @@
 
 <body>
 
-    <br>
+<br>
     <br>
 
     <div class="container">
-        <h2>Origen OLDB</h2>
-        <p>Seleccionar la tabla de origen o la consulta para los datos de origen:</p>
-        <form class="needs-validation" id="formulario-origen">
+    <h2>OLE DB COMMAND</h2>
+    <p>Ingrese el "SqlCommand" para la siguiente base:</p>  
+          <form class="needs-validation" id="formulario-command">
             <div class="form-check-inline">
                 <label class="form-check-label" for="radio1">
-                    <input type="radio" class="form-check-input" id="seleccion-tabla" name="optradio"
-                        value="option1">Tabla
-                </label>
-            </div>
-            <div class="form-check-inline">
-                <label class="form-check-label" for="radio2">
-                    <input type="radio" class="form-check-input" id="seleccion-consulta" name="optradio"
-                        value="option2">Consulta
+                    <input type="radio" class="form-check-input" id="seleccion-consulta" name="consulta-olap"
+                        value="option1">Consulta
                 </label>
             </div>
 
-            <div class="mt-4 d-none" id="panel-tabla">
-                <select multiple class="form-control" id="tabla-origen" name="tabla-origen">
-                </select>
-            </div>
+
 
             <div class="mt-4 d-none" id="panel-consulta">
                 <textarea class="form-control" rows="5" id="consulta" name="consulta"></textarea>
             </div>
             <br>
-            <button type="submit" class="btn btn-primary mt-4" id="btn-org" disabled>Siguiente</button>
+            <button type="submit" class="btn btn-primary mt-4" id="btn-com" disabled>Siguiente</button>
         </form>
     </div>
 
@@ -56,7 +45,7 @@
     <script src="../../js/jquery.min.js"></script>
     <script src="../../js/popper.min.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
-    <script src="../../js/origen.js"></script>
+    <script src="../../js/command.js"></script>
 
 </body>
 

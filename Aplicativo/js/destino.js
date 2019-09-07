@@ -1,15 +1,12 @@
-//Cargar las bases de datos
+//cargar las tablas
 $.ajax({
-    url: "ajax/base-datos.php",
+    url: "../../ajax/info-destino1.php",
     dataType: "json",
     success: function(respuesta) {
         console.log(respuesta);
         console.log(respuesta["total"]);
         for (var i = 0; i < respuesta.total; i++) {
-            $("#oltp").append(
-                `<option value="${respuesta[i].nombre}">${respuesta[i].nombre}</option>`
-            );
-            $("#olap").append(
+            $("#tabla-destino").append(
                 `<option value="${respuesta[i].nombre}">${respuesta[i].nombre}</option>`
             );
         }
@@ -19,43 +16,11 @@ $.ajax({
     }
 });
 
-/* 
-$("#olap").change(function(){
-    alert ($("#olap").val());
-}); 
- */
-
-/* function seleccionar_base() {
-    var tpm=$("#olap").val();
-    alert(tpm);
-    window.location.href = "tablas.php"
-} */
-
-/* $("#olap").change(function(){
-    console.log("Cuenta seleccionado: " + $("#olap").val());
-    var parametros= 
-            "olap="+$("#olap").val();
-    $.ajax({
-        url:"ajax/base-datos-dw.php",
-        method:"POST",
-        data:parametros,
-        dataType:"json",
-        success: function(respuesta){
-            console.log(respuesta);
-         
-        
-        },
-        error:function(error){
-            console.log(error);
-        }
-     });
-
-}); */
 
 
 
-// Example starter JavaScript for disabling form submissions if there are invalid fields
- (function () {
+
+(function () {
     'use strict';
 
     window.addEventListener('load', function () {
@@ -72,20 +37,19 @@ $("#olap").change(function(){
                     console.log("tamos mal :c");
                 } else {
                     console.log("tamos bien");
-                    var parametros = $("#formulario-base").serialize();
+                    var parametros = $("#formulario-destino").serialize();
                     //alert(parametros);
                     
                     $.ajax({
-                        url: "ajax/base-datos-dw.php",
+                        url: "ajax/info-destin.php",
                         method: "POST",
                         dataType: "json",
                         data: parametros,
                         success: function (respuesta) {
 
                             console.log(respuesta);
-                            window.location.href = "tablas.php";
-                           /*  window.location.href = "data flow/destination/destino.php";
- */
+                            window.location.href = "columnas-destino.php";
+
                         },
                         error: function (error) {
                             console.log(error);
@@ -101,6 +65,6 @@ $("#olap").change(function(){
     }, false);
 })();
 
-$("#formulario-base").submit(function () {
+$("#formulario-destino").submit(function () {
     return false;
-});
+}); 

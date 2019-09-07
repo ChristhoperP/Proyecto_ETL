@@ -4,7 +4,7 @@
         session_start();
       
 
-        $base=$_SESSION["olap"]; 
+        $base=$_SESSION["oltp"]; 
         
   
  //se establece una conexion a la base de datos
