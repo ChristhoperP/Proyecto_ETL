@@ -2,7 +2,7 @@
     session_start();
     include '../class/class-conexion.php';
     $db=$_SESSION["oltp"];
-    $conexion=new Conexion("localhost",$db);
+    $conexion=new Conexion("localhost", $db);
 
     $resultado=$conexion->ejecutarConsulta('select t.name
     from sys.tables t');

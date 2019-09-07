@@ -9,6 +9,7 @@
   <!-- Bootstrap core CSS -->
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 </head>
 
@@ -28,6 +29,7 @@
   <!-- Placed at the end of the document so the pages load faster -->
   
   <script src="js/jquery.min.js"></script>
+  <script src="js/flujo.js"></script>
   <script src="js/tablas.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>

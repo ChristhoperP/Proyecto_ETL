@@ -26,8 +26,8 @@ include '../class/class-conexion.php';
 
 switch ($_POST["optradio"]) {
     case 'option1':
-        $db = $_SESSION["oltp"];
-        $conexion = new Conexion("localhost", $db);
+        $db = $_SESSION["oltp"]; 
+        $conexion = new Conexion("localhost",  $db);
 
         $consulta = "SELECT * FROM " . $_POST["tabla-origen"];
 
