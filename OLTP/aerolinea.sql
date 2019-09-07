@@ -57,7 +57,7 @@ CREATE TABLE Telefono (
 -- -----------------------------------------------------
 CREATE TABLE Pasajero (
   idPasajero INT NOT NULL,
-  fechaRegistro DATE NULL,
+  fechaRegistro DATETIME NULL,
   persona_idpersona INT NOT NULL,
   PRIMARY KEY (idPasajero),
   CONSTRAINT fk_pasajero_persona1
@@ -85,7 +85,7 @@ CREATE TABLE Asiento (
   idAsiento INT NOT NULL,
   numeroAsiento VARCHAR(45) NULL,
   ubicacion VARCHAR(45) NULL,
-  fechaUltimoMantenimiento DATE NULL,
+  fechaUltimoMantenimiento DATETIME NULL,
   Avion_idAvion INT NOT NULL,
   PRIMARY KEY (idAsiento),
   CONSTRAINT fk_Asiento_Avion1
@@ -100,7 +100,7 @@ CREATE TABLE Asiento (
 -- -----------------------------------------------------
 CREATE TABLE Piloto (
   idPiloto INT NOT NULL,
-  fechaIngreso DATE NULL,
+  fechaIngreso DATETIME NULL,
   cantidadHorasVuelo FLOAT NULL,
   Persona_idPersona INT NOT NULL,
   PRIMARY KEY (idPiloto),
@@ -215,7 +215,7 @@ CREATE TABLE Vuelo (
 -- -----------------------------------------------------
 CREATE TABLE Empleado (
   idEmpleado INT NOT NULL,
-  fechaContratacion DATE NULL,
+  fechaContratacion DATETIME NULL,
   Persona_idPersona INT NOT NULL,
   PRIMARY KEY (idEmpleado),
   CONSTRAINT fk_Empleado_Persona1
@@ -230,7 +230,7 @@ CREATE TABLE Empleado (
 -- -----------------------------------------------------
 CREATE TABLE Boleto (
   idBoleto INT NOT NULL,
-  fechaEmision DATE NULL,
+  fechaEmision DATETIME NULL,
   precioCompra MONEY NULL,
   Asiento_idAsiento INT NOT NULL,
   vuelo_idvuelo INT NOT NULL,
@@ -297,8 +297,8 @@ CREATE TABLE Equipaje (
 CREATE TABLE PrecioVuelo (
   idPrecioVuelo INT NOT NULL,
   precio MONEY NULL,
-  fechaInicio DATE NULL,
-  fechaFin DATE NULL,
+  fechaInicio DATETIME NULL,
+  fechaFin DATETIME NULL,
   Vuelo_idVuelo INT NOT NULL,
   PRIMARY KEY (idPrecioVuelo),
   CONSTRAINT fk_PrecioVuelo_Vuelo1

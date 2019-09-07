@@ -1,12 +1,14 @@
 <?php
 include '../class/class-conexion.php';
 
+$tipo_dato_numerico=array(-9=>"nvarchar",1=>"Char",93=>"datetime", 4=>"int", 6=>"float", 3=>"Money", -2=>"timestamp", 10=>"date");
 
-$db = "Northwind";
+
+$db = "aerolinea";
 
 $conexion = new Conexion("localhost", $db);
 
-$consulta = "SELECT * FROM (select firstname, lastname from Employees) tb1";
+$consulta = "SELECT * FROM (select * from boleto) tb1";
 
 $resultado = $conexion->ejecutarConsulta($consulta);
 
@@ -20,7 +22,14 @@ echo '<br>';
 
 for ($i=0; $i <sqlsrv_num_fields($resultado) ; $i++) { 
     print_r(sqlsrv_field_metadata($resultado)[$i]["Name"]);
+    echo " ";
+    echo $tipo_dato_numerico[sqlsrv_field_metadata($resultado)[$i]["Type"]];
     echo '<br>';
 }
 
 echo json_encode(sqlsrv_field_metadata($resultado));
+
+echo '<br>';
+
+echo '<br>';
+
