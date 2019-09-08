@@ -24,7 +24,7 @@
             <div id="columnas">
                 
             </div>
-            <button type="button" class="btn btn-primary mt-4" id="btn-col">Finalizar</button>
+            <button type="button" class="btn btn-primary mt-4" id="btn-col">Convertir datos</button>
         </form>
     </div>
 

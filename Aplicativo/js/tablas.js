@@ -1,13 +1,13 @@
 /* var parametros="nombre="+$("#nombre").html(); */
 
- 
 
-    $.ajax({
-        url: "ajax/base-datos-dw2.php",
-        dataType: "json",
-        success: function(respuesta) {
-            console.log(respuesta);
-            console.log(respuesta["total"]);
+
+$.ajax({
+    url: "ajax/base-datos-dw2.php",
+    dataType: "json",
+    success: function (respuesta) {
+        console.log(respuesta);
+        console.log(respuesta["total"]);
         for (var i = 0; i < respuesta.total; i++) {
             $("#tablas").append(
                 `<div  class="card w-50">
@@ -19,7 +19,7 @@
             );
         }
     },
-    error: function(error) {
+    error: function (error) {
         console.log(error);
     }
 });

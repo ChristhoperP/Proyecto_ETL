@@ -65,7 +65,7 @@
     </div>
 
     <br>
-    <button type="submit" class="btn btn-primary mt-4" id="btn-concat">Siguiente</button>
+    <button type="submit" class="btn btn-primary mt-4" id="btn-concat">Data Destination</button>
 
     </div>
 

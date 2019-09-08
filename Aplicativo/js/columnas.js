@@ -34,7 +34,7 @@ $("#btn-col").click(function () {
         data: parametros,
         success: function (respuesta) {
             console.log(respuesta);
-            //window.location.href = "tablas.php";
+            window.location.href = "../Data Conversion/conversion.php";
         },
         error: function (error) {
             console.log(error);
