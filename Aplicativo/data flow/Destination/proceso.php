@@ -16,24 +16,35 @@
 <body>
 
   <br>
-  <br>
+  <br> 
 
-  <div class="container">
-    <h1>Seleccione la tabla a modificar del data:</h1>
-    <div class="col-md-12 order-md-1">
-    <!-- <h4 class="mb-3">Datos</h4> -->
-    <form  class="needs-validation" id="formulario-tablas" novalidate></form>
-        <div  id="tabla-destino" class="row">
-          
-    </div>    
-</div>
-  </div>
+
+    <div class="container">
+    <h1>Asignaciones Destino OLDB</h1>
+    <br>
+  <br> 
+  <div class="row">
+  <div class="col-12 font-weight-bold">Columnas Tabla Olap</div>
+  
+  <br>
+  
+    <div  class="list-group" id="lista-columnas"  class="col">
+     
+    </div>
+    <div class="col-12 font-weight-bold">Columnas conversion </div>
+    <br>
+    <div  class="list-group" id="lista-conversion" class="col">
+     
+    </div>
+  </div> 
+
   <!-- Bootstrap core JavaScript
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
  
   <script src="../../js/jquery.min.js"></script>
-  <script src="../../js/destino.js"></script>
+  <script src="../../js/proceso.js"></script>
+  <script src="../../js/flujo.js"></script>
   <script src="../../js/popper.min.js"></script>
   <script src="../../js/bootstrap.min.js"></script>
   
