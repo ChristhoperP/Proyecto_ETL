@@ -3,7 +3,7 @@ function flujo(button) {
     var parametros =
         "flujo=" + button.value;
     $.ajax({
-        url: "ajax/flujo-oltp.php",
+        url: "ajax/flujo-olap.php",
         method: "POST",
         data: parametros,
         dataType: "json",
