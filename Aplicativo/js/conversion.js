@@ -176,12 +176,38 @@ function camposConversion() {
 }
 
 $("#btn-concat").click(function() {
-    console.log(generaUrl());
-    console.log(camposConversion());
-
-    //arreglo solo con los nombres de los campos del data conversion
-
-
-    //enviar los campos del data conversion y almacenarlos en una variable de session y redirigir al data destination
+    //console.log(generaUrl());//nombre campos conversion
+    //console.log(camposConversion());//campos conversion
     
+    $.ajax({
+        url: "../../ajax/conversion.php?opcion=3",
+        method: "POST",
+        dataType: "json",
+        data: {'array': JSON.stringify(generaUrl())},
+        success: function (respuesta) {
+            console.log("Conversion: ");
+            console.log(respuesta);
+            $.ajax({
+                url: "../../ajax/conversion.php?opcion=4",
+                method: "POST",
+                dataType: "json",
+                data: {'array': JSON.stringify(camposConversion())},
+                success: function (respuesta) {
+                    console.log("Original: ");
+                    console.log(respuesta);
+                    //window.location.href = "../Destination/destino/.php";
+                },
+                error: function (error) {
+                    console.log(error);
+                    alert("error al convertir json.");
+                    //limpiar();
+                }
+            });
+        },
+        error: function (error) {
+            console.log(error);
+            alert("error al convertir json.");
+            //limpiar();
+        }
+    });
 });

@@ -22,7 +22,17 @@ switch ($_GET["opcion"]) {
         break;
         //convierte el url encode a json
     case '2':
-            echo json_encode($_POST);
+        echo json_encode($_POST);
+        break;
+    case '3':
+        session_start();
+        $_SESSION["Conversion-Columnas"] = json_decode($_POST["array"]);
+        echo $_POST["array"];
+        break;
+    case '4':
+        session_start();
+        $_SESSION["Original-Columnas"] = json_decode($_POST["array"]);
+        echo $_POST["array"];
         break;
     default:
         # code...
