@@ -22,22 +22,21 @@
     <div class="container">
     <h1>Asignaciones Destino OLDB</h1>
     <br>
-  <br> 
-  <div class="row">
-  <div class="col-12 font-weight-bold">Columnas Tabla Olap</div>
-  
-  <br>
-  
-    <div  class="list-group" id="lista-columnas"  class="col">
-     
-    </div>
-    <div class="col-12 font-weight-bold">Columnas conversion </div>
-    <br>
-    <div  class="list-group" id="lista-conversion" class="col">
-     
-    </div>
-  </div> 
+    <br> 
+  <form class="needs-validation" id="formulario-proceso" novalidate>
+  <div class="row mb-2">
+  <div class="col-3">Columnas Base Olap</div>
+  <div class="col-3">Columnas conversion</div>
+  </div>
+  <div class="container">
+    <div class="row mb-2" >
+  <div class="list-group col-3" id="lista-columnas"></div>
 
+  <div class="col-md" id="lista-conversion"></div>
+  </div>
+  </div>
+  <button type="submit" class="btn btn-primary mt-4" id="btn-consulta">Consultar</button>
+</div>
   <!-- Bootstrap core JavaScript
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
@@ -45,6 +44,7 @@
   <script src="../../js/jquery.min.js"></script>
   <script src="../../js/proceso.js"></script>
   <script src="../../js/flujo.js"></script>
+<!--   <script src="../../js/proceso2.js"></script> -->
   <script src="../../js/popper.min.js"></script>
   <script src="../../js/bootstrap.min.js"></script>
   

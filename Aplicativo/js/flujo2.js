@@ -8,6 +8,7 @@ function flujo(button) {
         data: parametros,
         dataType: "json",
         success: function (respuesta) {
+            alert(respuesta);
             console.log(respuesta);
              window.location.href = "proceso.php";
         },

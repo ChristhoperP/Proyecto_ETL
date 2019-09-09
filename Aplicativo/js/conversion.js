@@ -195,7 +195,7 @@ $("#btn-concat").click(function() {
                 success: function (respuesta) {
                     console.log("Original: ");
                     console.log(respuesta);
-                    //window.location.href = "../Destination/destino/.php";
+                    window.location.href = "../destination/destino.php";
                 },
                 error: function (error) {
                     console.log(error);
